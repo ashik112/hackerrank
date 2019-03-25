@@ -1,5 +1,5 @@
-Manacher's algorithm (see: https://en.wikipedia.org/wiki/Longest_palindromic_substring)
----------------------------------------------------------------------------------------
+# Manacher's algorithm
+
 To find in linear time a longest palindrome in a string, an algorithm may take advantage of the following characteristics or observations about a palindrome and a sub-palindrome:
 
 1. The left side of a palindrome is a mirror image of its right side.
@@ -17,3 +17,5 @@ To find in linear time a longest palindrome in a string, an algorithm may take a
 7. Regarding the time complexity of palindromic length determination for each character in a string: there is no character comparison for Case 1, while for Cases 2 and 3 only the characters in the string beyond the right outermost character of the reference palindrome are candidates for comparison (and consequently Case 3 always results in a new reference palindrome while Case 2 does so only if the third palindrome is actually longer than its guaranteed minimum length).
 
 8. For even-length palindromes, the center is at the boundary of the two characters in the middle.
+
+see: <https://en.wikipedia.org/wiki/Longest_palindromic_substring>
