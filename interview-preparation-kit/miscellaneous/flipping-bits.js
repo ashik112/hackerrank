@@ -1,8 +1,8 @@
 //Flipping bits
 
 function flippingBits(N) {
-    /* The only JavaScript operator that works using unsigned 32-bit integers is >>>. You can        
-     * exploit this to convert a signed-integer-in-Number.
+    /* The only JavaScript operator that works using unsigned 32-bit integers is >>>.
+     * You can exploit this to convert a signed-integer in unsigned-integer number.
      */
     return (~N) >>> 0;
 }
