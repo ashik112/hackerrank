@@ -19,6 +19,7 @@ function candies(n, child) {
 
     //left to right
     for (let i = 0; i < n; i++) {
+        //compare current value with previous value
         if (child[i] < child[i - 1]) {
             candy[i] = 1;
             if (candy[i] === candy[i - 1]) {
@@ -34,6 +35,7 @@ function candies(n, child) {
     //right to left
     for (let i = n - 1; i >= 0; i--) {
         if (child[i] < child[i - 1]) {
+            //e.g, [4,2] has [1,1] after first iteration but should be [(1+1),1] => [2,1]
             if (candy[i] >= candy[i - 1]) {
                 candy[i - 1] = candy[i] + 1;
             }
@@ -43,5 +45,5 @@ function candies(n, child) {
     return candy.reduce((total, num) => total + num); // return sum of candy[]
 }
 
-console.log(candies(3,[1,2,2])); // 4
-console.log(candies(8,[2,3,6,5,4,3,2,2])); // 19
+console.log(candies(3, [1, 2, 2])); // 4
+console.log(candies(8, [2, 3, 6, 5, 4, 3, 2, 2])); // 19
